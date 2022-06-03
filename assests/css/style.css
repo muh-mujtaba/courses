@@ -60,6 +60,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	padding-top: 67px;
 
 }
 .responsive-header ul li a{
