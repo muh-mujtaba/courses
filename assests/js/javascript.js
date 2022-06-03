@@ -60,7 +60,6 @@ loginbtn.addEventListener('click',function(){
 });
 let navjs = document.getElementById("navjs");
 var textjs = document.getElementsByClassName("textjs");
-
 window.addEventListener("scroll", ()=>{
   if(window.pageYOffset>100){
     navjs.style.backgroundColor = "#FF6700";
