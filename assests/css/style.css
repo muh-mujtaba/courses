@@ -6,6 +6,7 @@ body {
     color: #798696;
 	overflow-x:hidden;
 }
+
 #navbarSupportedContent > ul > li > a:after{
 	content: "";
     display: block;
@@ -13,7 +14,7 @@ body {
     background-color: #FF6700 !important;
 	width: 100%;
 	opacity: 0;
-    transition: 0.2s all;
+	transition: 0.2s all;
 }
 #navbarSupportedContent > ul > li > a:hover::after{
 	content: "";
@@ -28,6 +29,11 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+}
+#navjs{
+	position: fixed;
+	z-index: 1;
+	background-color: white;
 }
 .head-btn{
 	display: none;

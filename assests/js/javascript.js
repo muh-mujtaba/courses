@@ -32,28 +32,47 @@ window.addEventListener("scroll", ()=>{
 let logincontainer = document.getElementById("login_container");
 let loginbtn = document.getElementById("loginbtn");
 let cross = document.getElementById("cross");
-
+let bd = document.getElementsByTagName("body")[0];
 cross.addEventListener('click',function(){
     console.log("click");
 
    if(logincontainer.style.opacity == "1"){
-    logincontainer.style.opacity = "0";           
+    logincontainer.style.opacity = "0"; 
+    bd.style.overflow="";     
       }else{
-        logincontainer.style.opacity = "1";   
+        logincontainer.style.opacity = "1"; 
+        bd.style.overflow="hidden";  
       }
 });
 
 loginbtn.addEventListener('click',function(){
-    console.log("click");
 
    if(logincontainer.style.opacity == "0"){
-    logincontainer.style.opacity = "1";           
+    logincontainer.style.opacity = "1";
+    bd.style.overflow="hidden";  
+    //body.classList.add("over");   
       }else{
-        logincontainer.style.opacity = "0";   
+        logincontainer.style.opacity = "0";
+        bd.style.overflow="";
+       // body.classList.remove("over");  
       }
-
-      Window.addEventListener('scroll', function(){
-        window.scrollTo(0,0);
-      })
       
 });
+let navjs = document.getElementById("navjs");
+var textjs = document.getElementsByClassName("textjs");
+
+window.addEventListener("scroll", ()=>{
+  if(window.pageYOffset>100){
+    navjs.style.backgroundColor = "#FF6700";
+    for (var i = 0; i < textjs.length; i++) {
+      textjs[i].style.color="white";
+    }
+  }else{
+    navjs.style.backgroundColor = "white";
+    for (var i = 0; i < textjs.length; i++) {
+      textjs[i].style.color="black";
+    }
+  }
+
+});
+
